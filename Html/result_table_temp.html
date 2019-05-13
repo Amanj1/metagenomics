@@ -1,0 +1,2920 @@
+<!doctype html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<!-- 
+* Working with dynamic table
+* WebSite: http://www.dynatable.com/
+-->
+<!-- 	Bootstrap v2.3.2 -->
+<link rel="stylesheet" media="all" href="https://s3.amazonaws.com/dynatable-docs-assets/css/bootstrap-2.3.2.min.css" />
+<!-- Plugin styles -->
+<link rel="stylesheet" media="all" href="https://s3.amazonaws.com/dynatable-docs-assets/css/jquery.dynatable.css" />
+<!--  jQuery v3.0.0-beta1 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
+<!-- JS Pluging -->
+<script type='text/javascript' src='https://s3.amazonaws.com/dynatable-docs-assets/js/jquery.dynatable.js'></script>
+<script type="text/javascript">	
+	$(document).ready( function() {
+	$('#example').dynatable({
+	dataset: {
+		records: JSON.parse($('#patients').text())
+	}
+	});
+	});
+		
+</script>		
+</head>	
+	<body>
+		<div class = "container"  style="float:left;">
+			<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th>sample_id</th>
+						<th>name</th>
+						<th>kraken_nr_reads</th>
+						<th>fast_virome_explorer</th>
+						<th>metaphlan</th>
+						<th>classification</th>
+						<th>full_taxon_level:family_genus_species_subspecies</th>
+					</tr>
+				</thead>
+
+				<tfoot>
+					<tr>
+						<th>sample_id</th>
+						<th>name</th>
+						<th>kraken_nr_reads</th>
+						<th>fast_virome_explorer</th>
+						<th>metaphlan</th>
+						<th>classification</th>
+						<th>full_taxon_level:family_genus_species_subspecies</th>
+					</tr>
+				</tfoot>
+				 <tbody id="tbody">
+				</tbody>
+				<tbody>
+
+				</tbody>
+			</table>
+		 </div>
+	<script id="patients">
+[
+	{
+		"sample_id": "P12653_1001",
+		"name": "Flaviviridae",
+		"kraken_nr_reads": 142,
+		"fast_virome_explorer": "-",
+		"metaphlan": 100,
+		"classification": "Family",
+		"full_taxon_level:family_genus_species_subspecies": "Flaviviridae"
+	},
+	{
+		"sample_id": "P12653_1001",
+		"name": "Pegivirus",
+		"kraken_nr_reads": 142,
+		"fast_virome_explorer": "-",
+		"metaphlan": 100,
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Flaviviridae->Pegivirus"
+	},
+	{
+		"sample_id": "P12653_1001",
+		"name": "Pegivirus_C",
+		"kraken_nr_reads": 142,
+		"fast_virome_explorer": 66,
+		"metaphlan": 100,
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Flaviviridae->Pegivirus->Pegivirus_C"
+	},
+	{
+		"sample_id": "P12653_1001",
+		"name": "GB_virus_C",
+		"kraken_nr_reads": 142,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Sub_Species",
+		"full_taxon_level:family_genus_species_subspecies": "Flaviviridae->Pegivirus->Pegivirus_C->GB_virus_C"
+	},
+	{
+		"sample_id": "P12653_1001",
+		"name": "Picornaviridae",
+		"kraken_nr_reads": 6,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Family",
+		"full_taxon_level:family_genus_species_subspecies": "Picornaviridae"
+	},
+	{
+		"sample_id": "P12653_1001",
+		"name": "Enterovirus",
+		"kraken_nr_reads": 6,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Picornaviridae->Enterovirus"
+	},
+	{
+		"sample_id": "P12653_1001",
+		"name": "Enterovirus_J",
+		"kraken_nr_reads": 6,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Picornaviridae->Enterovirus->Enterovirus_J"
+	},
+	{
+		"sample_id": "P12653_1001",
+		"name": "Pneumoviridae",
+		"kraken_nr_reads": 2,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Family",
+		"full_taxon_level:family_genus_species_subspecies": "Pneumoviridae"
+	},
+	{
+		"sample_id": "P12653_1001",
+		"name": "Anelloviridae",
+		"kraken_nr_reads": 23,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Family",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae"
+	},
+	{
+		"sample_id": "P12653_1001",
+		"name": "Alphatorquevirus",
+		"kraken_nr_reads": 15,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus"
+	},
+	{
+		"sample_id": "P12653_1001",
+		"name": "Torque_teno_virus_24",
+		"kraken_nr_reads": 6,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_24"
+	},
+	{
+		"sample_id": "P12653_1001",
+		"name": "Torque_teno_virus_19",
+		"kraken_nr_reads": 3,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_19"
+	},
+	{
+		"sample_id": "P12653_1001",
+		"name": "Torque_teno_virus_5",
+		"kraken_nr_reads": 2,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_5"
+	},
+	{
+		"sample_id": "P12653_1001",
+		"name": "Gammatorquevirus",
+		"kraken_nr_reads": 6,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus"
+	},
+	{
+		"sample_id": "P12653_1001",
+		"name": "Torque_teno_midi_virus_14",
+		"kraken_nr_reads": 2,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_14"
+	},
+	{
+		"sample_id": "P12653_1001",
+		"name": "Torque_teno_midi_virus_2",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_2"
+	},
+	{
+		"sample_id": "P12653_1001",
+		"name": "PRJNA15467",
+		"kraken_nr_reads": "-",
+		"fast_virome_explorer": "-",
+		"metaphlan": 100,
+		"classification": "Sub_Species",
+		"full_taxon_level:family_genus_species_subspecies": "Flaviviridae->Pegivirus->GB_virus_C->PRJNA15467"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Anelloviridae",
+		"kraken_nr_reads": 1275769,
+		"fast_virome_explorer": "-",
+		"metaphlan": 100,
+		"classification": "Family",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Alphatorquevirus",
+		"kraken_nr_reads": 1183248,
+		"fast_virome_explorer": "-",
+		"metaphlan": 100,
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_virus_24",
+		"kraken_nr_reads": 641964,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_24"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_virus_16",
+		"kraken_nr_reads": 92080,
+		"fast_virome_explorer": 36844.3,
+		"metaphlan": 79.92403,
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_16"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_virus_13",
+		"kraken_nr_reads": 69022,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_13"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_virus_8",
+		"kraken_nr_reads": 52061,
+		"fast_virome_explorer": 20915.3,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_8"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_virus_10",
+		"kraken_nr_reads": 47824,
+		"fast_virome_explorer": 1443.38,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_10"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_virus_19",
+		"kraken_nr_reads": 43124,
+		"fast_virome_explorer": 8508.51,
+		"metaphlan": 14.11914,
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_19"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_virus_4",
+		"kraken_nr_reads": 29334,
+		"fast_virome_explorer": 7276.5,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_4"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_virus_21",
+		"kraken_nr_reads": 27469,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_21"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_virus_7",
+		"kraken_nr_reads": 22062,
+		"fast_virome_explorer": 4813.03,
+		"metaphlan": 5.95683,
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_7"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_virus_12",
+		"kraken_nr_reads": 20236,
+		"fast_virome_explorer": 5383.06,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_12"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_virus_3",
+		"kraken_nr_reads": 9006,
+		"fast_virome_explorer": 9017.54,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_3"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_virus_11",
+		"kraken_nr_reads": 8016,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_11"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_virus_15",
+		"kraken_nr_reads": 5694,
+		"fast_virome_explorer": 44006.6,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_15"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_virus_5",
+		"kraken_nr_reads": 3733,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_5"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_virus_20",
+		"kraken_nr_reads": 3141,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_20"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_virus_27",
+		"kraken_nr_reads": 2258,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_27"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_virus_29",
+		"kraken_nr_reads": 1398,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_29"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_virus_9",
+		"kraken_nr_reads": 1357,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_9"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_virus_28",
+		"kraken_nr_reads": 1097,
+		"fast_virome_explorer": 1058.69,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_28"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_virus_6",
+		"kraken_nr_reads": 757,
+		"fast_virome_explorer": 760.258,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_6"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_virus_14",
+		"kraken_nr_reads": 294,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_14"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_virus_1",
+		"kraken_nr_reads": 219,
+		"fast_virome_explorer": 43.0283,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_1"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_virus_2",
+		"kraken_nr_reads": 101,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_2"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_virus_23",
+		"kraken_nr_reads": 18,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_23"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Simian_torque_teno_virus_31",
+		"kraken_nr_reads": 2,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Simian_torque_teno_virus_31"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Simian_torque_teno_virus_30",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Simian_torque_teno_virus_30"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_virus_25",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_25"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Gammatorquevirus",
+		"kraken_nr_reads": 81849,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_midi_virus_10",
+		"kraken_nr_reads": 10994,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_10"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_midi_virus_8",
+		"kraken_nr_reads": 9530,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_8"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_midi_virus_15",
+		"kraken_nr_reads": 6191,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_15"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_midi_virus_2",
+		"kraken_nr_reads": 4835,
+		"fast_virome_explorer": 3159.23,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_2"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_midi_virus_4",
+		"kraken_nr_reads": 3783,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_4"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_midi_virus_6",
+		"kraken_nr_reads": 3739,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_6"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_midi_virus_11",
+		"kraken_nr_reads": 1859,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_11"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_midi_virus_14",
+		"kraken_nr_reads": 1814,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_14"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_midi_virus_9",
+		"kraken_nr_reads": 1488,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_9"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_midi_virus_12",
+		"kraken_nr_reads": 597,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_12"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_midi_virus_5",
+		"kraken_nr_reads": 553,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_5"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_midi_virus_3",
+		"kraken_nr_reads": 490,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_3"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_midi_virus_1",
+		"kraken_nr_reads": 406,
+		"fast_virome_explorer": 8504.65,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_1"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_midi_virus_13",
+		"kraken_nr_reads": 164,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_13"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_midi_virus_7",
+		"kraken_nr_reads": 116,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_7"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Betatorquevirus",
+		"kraken_nr_reads": 3178,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "TTV-like_mini_virus",
+		"kraken_nr_reads": 236,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->TTV-like_mini_virus"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_mini_virus_ALH8",
+		"kraken_nr_reads": 197,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_ALH8"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_mini_virus_ALA22",
+		"kraken_nr_reads": 132,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_ALA22"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_mini_virus_18",
+		"kraken_nr_reads": 108,
+		"fast_virome_explorer": 48.0602,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_18"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_mini_virus_7",
+		"kraken_nr_reads": 357,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_7"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_mini_virus_5",
+		"kraken_nr_reads": 293,
+		"fast_virome_explorer": 65.8962,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_5"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_mini_virus_1",
+		"kraken_nr_reads": 282,
+		"fast_virome_explorer": 126.958,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_1"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_mini_virus_10",
+		"kraken_nr_reads": 192,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_10"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_mini_virus_8",
+		"kraken_nr_reads": 186,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_8"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_mini_virus_3",
+		"kraken_nr_reads": 149,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_3"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_mini_virus_12",
+		"kraken_nr_reads": 113,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_12"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_mini_virus_9",
+		"kraken_nr_reads": 112,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_9"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_mini_virus_11",
+		"kraken_nr_reads": 70,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_11"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_mini_virus_6",
+		"kraken_nr_reads": 54,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_6"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_mini_virus_2",
+		"kraken_nr_reads": 37,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_2"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_mini_virus_4",
+		"kraken_nr_reads": 23,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_4"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Small_anellovirus",
+		"kraken_nr_reads": 2305,
+		"fast_virome_explorer": 6282.84,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Small_anellovirus"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Small_anellovirus_2",
+		"kraken_nr_reads": 2115,
+		"fast_virome_explorer": 3252.36,
+		"metaphlan": "-",
+		"classification": "Sub_Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Small_anellovirus->Small_anellovirus_2"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Small_anellovirus_1",
+		"kraken_nr_reads": 190,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Sub_Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Small_anellovirus->Small_anellovirus_1"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_virus",
+		"kraken_nr_reads": 350,
+		"fast_virome_explorer": 242.011,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_virus"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Giant_panda_anellovirus",
+		"kraken_nr_reads": 23,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Giant_panda_anellovirus"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Etatorquevirus",
+		"kraken_nr_reads": 18,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Etatorquevirus"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_felis_virus",
+		"kraken_nr_reads": 18,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Etatorquevirus->Torque_teno_felis_virus"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Zetatorquevirus",
+		"kraken_nr_reads": 2,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Zetatorquevirus"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Torque_teno_douroucouli_virus",
+		"kraken_nr_reads": 2,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Zetatorquevirus->Torque_teno_douroucouli_virus"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Microviridae",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Family",
+		"full_taxon_level:family_genus_species_subspecies": "Microviridae"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Alpha3microvirus",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Microviridae->Alpha3microvirus"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Enterobacteria_phage_WA13_sensu_lato",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Microviridae->Alpha3microvirus->Enterobacteria_phage_WA13_sensu_lato"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Myoviridae",
+		"kraken_nr_reads": 11,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Family",
+		"full_taxon_level:family_genus_species_subspecies": "Myoviridae"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Synechococcus_phage_ACG-2014i",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Myoviridae->Alpha3microvirus->Synechococcus_phage_ACG-2014i"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "Enterobacteria_phage_phiX174_sensu_lato",
+		"kraken_nr_reads": "-",
+		"fast_virome_explorer": 30,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Microviridae->Phix174microvirus->Enterobacteria_phage_phiX174_sensu_lato"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "PRJNA48181",
+		"kraken_nr_reads": "-",
+		"fast_virome_explorer": "-",
+		"metaphlan": 79.92403,
+		"classification": "Sub_Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_16->PRJNA48181"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "PRJNA48155",
+		"kraken_nr_reads": "-",
+		"fast_virome_explorer": "-",
+		"metaphlan": 14.11914,
+		"classification": "Sub_Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_19->PRJNA48155"
+	},
+	{
+		"sample_id": "P12653_1002",
+		"name": "PRJNA48159",
+		"kraken_nr_reads": "-",
+		"fast_virome_explorer": "-",
+		"metaphlan": 5.95683,
+		"classification": "Sub_Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_7->PRJNA48159"
+	},
+	{
+		"sample_id": "P12653_1003",
+		"name": "Anelloviridae",
+		"kraken_nr_reads": 42,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Family",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae"
+	},
+	{
+		"sample_id": "P12653_1003",
+		"name": "Alphatorquevirus",
+		"kraken_nr_reads": 42,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus"
+	},
+	{
+		"sample_id": "P12653_1003",
+		"name": "Torque_teno_virus_20",
+		"kraken_nr_reads": 8,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_20"
+	},
+	{
+		"sample_id": "P12653_1003",
+		"name": "Torque_teno_virus_24",
+		"kraken_nr_reads": 7,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_24"
+	},
+	{
+		"sample_id": "P12653_1003",
+		"name": "Torque_teno_virus_6",
+		"kraken_nr_reads": 6,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_6"
+	},
+	{
+		"sample_id": "P12653_1003",
+		"name": "Torque_teno_virus_19",
+		"kraken_nr_reads": 4,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_19"
+	},
+	{
+		"sample_id": "P12653_1003",
+		"name": "Torque_teno_virus_5",
+		"kraken_nr_reads": 3,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_5"
+	},
+	{
+		"sample_id": "P12653_1003",
+		"name": "Torque_teno_virus_8",
+		"kraken_nr_reads": 3,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_8"
+	},
+	{
+		"sample_id": "P12653_1003",
+		"name": "Torque_teno_virus_7",
+		"kraken_nr_reads": 2,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_7"
+	},
+	{
+		"sample_id": "P12653_1003",
+		"name": "Torque_teno_virus_11",
+		"kraken_nr_reads": 2,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_11"
+	},
+	{
+		"sample_id": "P12653_1003",
+		"name": "Torque_teno_virus_10",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_10"
+	},
+	{
+		"sample_id": "P12653_1003",
+		"name": "Torque_teno_virus_12",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_12"
+	},
+	{
+		"sample_id": "P12653_1003",
+		"name": "Pneumoviridae",
+		"kraken_nr_reads": 10,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Family",
+		"full_taxon_level:family_genus_species_subspecies": "Pneumoviridae"
+	},
+	{
+		"sample_id": "P12653_1003",
+		"name": "Peribunyaviridae",
+		"kraken_nr_reads": 4,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Family",
+		"full_taxon_level:family_genus_species_subspecies": "Peribunyaviridae"
+	},
+	{
+		"sample_id": "P12653_1003",
+		"name": "Orthobunyavirus",
+		"kraken_nr_reads": 4,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Peribunyaviridae->Orthobunyavirus"
+	},
+	{
+		"sample_id": "P12653_1003",
+		"name": "Simbu_orthobunyavirus",
+		"kraken_nr_reads": 4,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Peribunyaviridae->Orthobunyavirus->Simbu_orthobunyavirus"
+	},
+	{
+		"sample_id": "P12653_1003",
+		"name": "Myoviridae",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Family",
+		"full_taxon_level:family_genus_species_subspecies": "Myoviridae"
+	},
+	{
+		"sample_id": "P12653_1003",
+		"name": "B4virus",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Myoviridae->B4virus"
+	},
+	{
+		"sample_id": "P12653_1003",
+		"name": "Bacillus_virus_Spock",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Myoviridae->B4virus->Bacillus_virus_Spock"
+	},
+	{
+		"sample_id": "P12653_1003",
+		"name": "Bacillus_phage_Spock",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Sub_Species",
+		"full_taxon_level:family_genus_species_subspecies": "Myoviridae->B4virus->Bacillus_virus_Spock->Bacillus_phage_Spock"
+	},
+	{
+		"sample_id": "P12653_1003",
+		"name": "Enterobacteria_phage_phiX174_sensu_lato",
+		"kraken_nr_reads": "-",
+		"fast_virome_explorer": 60,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Microviridae->Phix174microvirus->Enterobacteria_phage_phiX174_sensu_lato"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Anelloviridae",
+		"kraken_nr_reads": 2207126,
+		"fast_virome_explorer": "-",
+		"metaphlan": 88.49459,
+		"classification": "Family",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Alphatorquevirus",
+		"kraken_nr_reads": 2152499,
+		"fast_virome_explorer": "-",
+		"metaphlan": 88.48571,
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_virus_24",
+		"kraken_nr_reads": 724037,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_24"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_virus_5",
+		"kraken_nr_reads": 406189,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_5"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_virus_19",
+		"kraken_nr_reads": 132067,
+		"fast_virome_explorer": 37042.1,
+		"metaphlan": 3.02827,
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_19"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_virus_15",
+		"kraken_nr_reads": 122618,
+		"fast_virome_explorer": 92714.8,
+		"metaphlan": 85.29281,
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_15"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_virus_8",
+		"kraken_nr_reads": 115917,
+		"fast_virome_explorer": 62193.5,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_8"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_virus_7",
+		"kraken_nr_reads": 85587,
+		"fast_virome_explorer": 3977.85,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_7"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_virus_20",
+		"kraken_nr_reads": 66269,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_20"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_virus_13",
+		"kraken_nr_reads": 54201,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_13"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_virus_10",
+		"kraken_nr_reads": 49769,
+		"fast_virome_explorer": 1340.33,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_10"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_virus_3",
+		"kraken_nr_reads": 47612,
+		"fast_virome_explorer": 14569.8,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_3"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_virus_21",
+		"kraken_nr_reads": 31748,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_21"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_virus_4",
+		"kraken_nr_reads": 30594,
+		"fast_virome_explorer": 764.715,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_4"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_virus_16",
+		"kraken_nr_reads": 27496,
+		"fast_virome_explorer": 9256.79,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_16"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_virus_12",
+		"kraken_nr_reads": 24867,
+		"fast_virome_explorer": 5513.2,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_12"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_virus_11",
+		"kraken_nr_reads": 9547,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_11"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_virus_23",
+		"kraken_nr_reads": 8624,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_23"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_virus_29",
+		"kraken_nr_reads": 4744,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_29"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_virus_6",
+		"kraken_nr_reads": 3147,
+		"fast_virome_explorer": 2835.42,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_6"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_virus_28",
+		"kraken_nr_reads": 3084,
+		"fast_virome_explorer": 5835.32,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_28"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_virus_27",
+		"kraken_nr_reads": 2480,
+		"fast_virome_explorer": 359.426,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_27"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_virus_1",
+		"kraken_nr_reads": 885,
+		"fast_virome_explorer": 1402.61,
+		"metaphlan": 0.16463,
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_1"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_virus_14",
+		"kraken_nr_reads": 679,
+		"fast_virome_explorer": 1540.06,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_14"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_virus_9",
+		"kraken_nr_reads": 392,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_9"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_virus_2",
+		"kraken_nr_reads": 72,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_2"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Simian_torque_teno_virus_30",
+		"kraken_nr_reads": 6,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Simian_torque_teno_virus_30"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_virus_25",
+		"kraken_nr_reads": 6,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_25"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Betatorquevirus",
+		"kraken_nr_reads": 31680,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "TTV-like_mini_virus",
+		"kraken_nr_reads": 10146,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->TTV-like_mini_virus"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_mini_virus_ALA22",
+		"kraken_nr_reads": 1518,
+		"fast_virome_explorer": 66.5362,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_ALA22"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_mini_virus_ALH8",
+		"kraken_nr_reads": 1143,
+		"fast_virome_explorer": 195.859,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_ALH8"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_mini_virus_18",
+		"kraken_nr_reads": 508,
+		"fast_virome_explorer": 1106.06,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_18"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_mini_virus_5",
+		"kraken_nr_reads": 7985,
+		"fast_virome_explorer": 1969.96,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_5"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_mini_virus_3",
+		"kraken_nr_reads": 3590,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_3"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_mini_virus_10",
+		"kraken_nr_reads": 785,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_10"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_mini_virus_7",
+		"kraken_nr_reads": 706,
+		"fast_virome_explorer": 315.886,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_7"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_mini_virus_12",
+		"kraken_nr_reads": 573,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_12"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_mini_virus_1",
+		"kraken_nr_reads": 545,
+		"fast_virome_explorer": 258.463,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_1"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_mini_virus_8",
+		"kraken_nr_reads": 160,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_8"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_mini_virus_11",
+		"kraken_nr_reads": 104,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_11"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_mini_virus_9",
+		"kraken_nr_reads": 56,
+		"fast_virome_explorer": 26.2501,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_9"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_mini_virus_6",
+		"kraken_nr_reads": 41,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_6"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_mini_virus_4",
+		"kraken_nr_reads": 31,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_4"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_mini_virus_2",
+		"kraken_nr_reads": 22,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_2"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Gammatorquevirus",
+		"kraken_nr_reads": 16013,
+		"fast_virome_explorer": "-",
+		"metaphlan": 0.00889,
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_midi_virus_10",
+		"kraken_nr_reads": 1836,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_10"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_midi_virus_11",
+		"kraken_nr_reads": 1611,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_11"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_midi_virus_9",
+		"kraken_nr_reads": 1472,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_9"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_midi_virus_15",
+		"kraken_nr_reads": 1154,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_15"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_midi_virus_3",
+		"kraken_nr_reads": 883,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_3"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_midi_virus_14",
+		"kraken_nr_reads": 546,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_14"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_midi_virus_2",
+		"kraken_nr_reads": 537,
+		"fast_virome_explorer": 501.663,
+		"metaphlan": 0.00889,
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_2"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_midi_virus_12",
+		"kraken_nr_reads": 520,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_12"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_midi_virus_1",
+		"kraken_nr_reads": 434,
+		"fast_virome_explorer": 1767.01,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_1"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_midi_virus_6",
+		"kraken_nr_reads": 316,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_6"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_midi_virus_7",
+		"kraken_nr_reads": 236,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_7"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_midi_virus_8",
+		"kraken_nr_reads": 208,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_8"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_midi_virus_4",
+		"kraken_nr_reads": 191,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_4"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_midi_virus_5",
+		"kraken_nr_reads": 16,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_5"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_midi_virus_13",
+		"kraken_nr_reads": 8,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_13"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_virus",
+		"kraken_nr_reads": 3573,
+		"fast_virome_explorer": 834.58,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_virus"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Small_anellovirus",
+		"kraken_nr_reads": 499,
+		"fast_virome_explorer": 411.563,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Small_anellovirus"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Small_anellovirus_2",
+		"kraken_nr_reads": 295,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Sub_Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Small_anellovirus->Small_anellovirus_2"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Small_anellovirus_1",
+		"kraken_nr_reads": 204,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Sub_Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Small_anellovirus->Small_anellovirus_1"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Giant_panda_anellovirus",
+		"kraken_nr_reads": 137,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Giant_panda_anellovirus"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Gorilla_anellovirus",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Gorilla_anellovirus"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Etatorquevirus",
+		"kraken_nr_reads": 117,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Etatorquevirus"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_felis_virus",
+		"kraken_nr_reads": 113,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Etatorquevirus->Torque_teno_felis_virus"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_felis_virus_2",
+		"kraken_nr_reads": 4,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Etatorquevirus->Torque_teno_felis_virus_2"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Iotatorquevirus",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Iotatorquevirus"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Torque_teno_sus_virus_1a",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Iotatorquevirus->Torque_teno_sus_virus_1a"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Papillomaviridae",
+		"kraken_nr_reads": 9988,
+		"fast_virome_explorer": "-",
+		"metaphlan": 11.48747,
+		"classification": "Family",
+		"full_taxon_level:family_genus_species_subspecies": "Papillomaviridae"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Gammapapillomavirus",
+		"kraken_nr_reads": 9967,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Papillomaviridae->Gammapapillomavirus"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Gammapapillomavirus_19",
+		"kraken_nr_reads": 9796,
+		"fast_virome_explorer": 3727,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Papillomaviridae->Gammapapillomavirus->Gammapapillomavirus_19"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Human_papillomavirus_type_166",
+		"kraken_nr_reads": 9642,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Sub_Species",
+		"full_taxon_level:family_genus_species_subspecies": "Papillomaviridae->Gammapapillomavirus->Gammapapillomavirus_19->Human_papillomavirus_type_166"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Human_papillomavirus_type_161",
+		"kraken_nr_reads": 143,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Sub_Species",
+		"full_taxon_level:family_genus_species_subspecies": "Papillomaviridae->Gammapapillomavirus->Gammapapillomavirus_19->Human_papillomavirus_type_161"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Gammapapillomavirus_11",
+		"kraken_nr_reads": 171,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Papillomaviridae->Gammapapillomavirus->Gammapapillomavirus_11"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Human_papillomavirus_136",
+		"kraken_nr_reads": 171,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Sub_Species",
+		"full_taxon_level:family_genus_species_subspecies": "Papillomaviridae->Gammapapillomavirus->Gammapapillomavirus_11->Human_papillomavirus_136"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Taupapillomavirus",
+		"kraken_nr_reads": 17,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Papillomaviridae->Taupapillomavirus"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Taupapillomavirus_4",
+		"kraken_nr_reads": 17,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Papillomaviridae->Taupapillomavirus->Taupapillomavirus_4"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Mustela_putorius_papillomavirus_1",
+		"kraken_nr_reads": 17,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Sub_Species",
+		"full_taxon_level:family_genus_species_subspecies": "Papillomaviridae->Taupapillomavirus->Taupapillomavirus_4->Mustela_putorius_papillomavirus_1"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Podoviridae",
+		"kraken_nr_reads": 50,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Family",
+		"full_taxon_level:family_genus_species_subspecies": "Podoviridae"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Phi29virus",
+		"kraken_nr_reads": 50,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Podoviridae->Phi29virus"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Bacillus_virus_phi29",
+		"kraken_nr_reads": 50,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Podoviridae->Phi29virus->Bacillus_virus_phi29"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Siphoviridae",
+		"kraken_nr_reads": 2,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Family",
+		"full_taxon_level:family_genus_species_subspecies": "Siphoviridae"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Lactococcus_phage_949",
+		"kraken_nr_reads": 2,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Siphoviridae->Phi29virus->Lactococcus_phage_949"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Myoviridae",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Family",
+		"full_taxon_level:family_genus_species_subspecies": "Myoviridae"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Synechococcus_phage_S-CAM3",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Myoviridae->Phi29virus->Synechococcus_phage_S-CAM3"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Poxviridae",
+		"kraken_nr_reads": 2,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Family",
+		"full_taxon_level:family_genus_species_subspecies": "Poxviridae"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "BeAn_58058_virus",
+		"kraken_nr_reads": 2,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Poxviridae->Phi29virus->BeAn_58058_virus"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Flaviviridae",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Family",
+		"full_taxon_level:family_genus_species_subspecies": "Flaviviridae"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Pegivirus",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Flaviviridae->Pegivirus"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Pegivirus_C",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Flaviviridae->Pegivirus->Pegivirus_C"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "GB_virus_C",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Sub_Species",
+		"full_taxon_level:family_genus_species_subspecies": "Flaviviridae->Pegivirus->Pegivirus_C->GB_virus_C"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Peribunyaviridae",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Family",
+		"full_taxon_level:family_genus_species_subspecies": "Peribunyaviridae"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Orthobunyavirus",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Peribunyaviridae->Orthobunyavirus"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Simbu_orthobunyavirus",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Peribunyaviridae->Orthobunyavirus->Simbu_orthobunyavirus"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Enterobacteria_phage_phiX174_sensu_lato",
+		"kraken_nr_reads": "-",
+		"fast_virome_explorer": 50,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Microviridae->Phix174microvirus->Enterobacteria_phage_phiX174_sensu_lato"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Papillomaviridae_noname",
+		"kraken_nr_reads": "-",
+		"fast_virome_explorer": "-",
+		"metaphlan": 11.48747,
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Papillomaviridae->Papillomaviridae_noname"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "Human_papillomavirus_161_like_viruses",
+		"kraken_nr_reads": "-",
+		"fast_virome_explorer": "-",
+		"metaphlan": 11.48747,
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Papillomaviridae->Papillomaviridae_noname->Human_papillomavirus_161_like_viruses"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "PRJNA48191",
+		"kraken_nr_reads": "-",
+		"fast_virome_explorer": "-",
+		"metaphlan": 85.29281,
+		"classification": "Sub_Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_15->PRJNA48191"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "PRJNA178458",
+		"kraken_nr_reads": "-",
+		"fast_virome_explorer": "-",
+		"metaphlan": 11.48747,
+		"classification": "Sub_Species",
+		"full_taxon_level:family_genus_species_subspecies": "Papillomaviridae->Papillomaviridae_noname->Human_papillomavirus_161_like_viruses->PRJNA178458"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "PRJNA48155",
+		"kraken_nr_reads": "-",
+		"fast_virome_explorer": "-",
+		"metaphlan": 3.02827,
+		"classification": "Sub_Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_19->PRJNA48155"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "PRJNA15247",
+		"kraken_nr_reads": "-",
+		"fast_virome_explorer": "-",
+		"metaphlan": 0.16463,
+		"classification": "Sub_Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_1->PRJNA15247"
+	},
+	{
+		"sample_id": "P12653_1004",
+		"name": "PRJNA48185",
+		"kraken_nr_reads": "-",
+		"fast_virome_explorer": "-",
+		"metaphlan": 0.00889,
+		"classification": "Sub_Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_2->PRJNA48185"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "Flaviviridae",
+		"kraken_nr_reads": 29765,
+		"fast_virome_explorer": "-",
+		"metaphlan": 99.9579,
+		"classification": "Family",
+		"full_taxon_level:family_genus_species_subspecies": "Flaviviridae"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "Pegivirus",
+		"kraken_nr_reads": 29763,
+		"fast_virome_explorer": "-",
+		"metaphlan": 99.9579,
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Flaviviridae->Pegivirus"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "Pegivirus_C",
+		"kraken_nr_reads": 29753,
+		"fast_virome_explorer": 14024,
+		"metaphlan": 99.9579,
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Flaviviridae->Pegivirus->Pegivirus_C"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "GB_virus_C",
+		"kraken_nr_reads": 29753,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Sub_Species",
+		"full_taxon_level:family_genus_species_subspecies": "Flaviviridae->Pegivirus->Pegivirus_C->GB_virus_C"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "Pegivirus_A",
+		"kraken_nr_reads": 7,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Flaviviridae->Pegivirus->Pegivirus_A"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "Simian_pegivirus",
+		"kraken_nr_reads": 7,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Sub_Species",
+		"full_taxon_level:family_genus_species_subspecies": "Flaviviridae->Pegivirus->Pegivirus_A->Simian_pegivirus"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "Hepacivirus",
+		"kraken_nr_reads": 2,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Flaviviridae->Hepacivirus"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "Rodent_hepacivirus",
+		"kraken_nr_reads": 2,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Flaviviridae->Hepacivirus->Rodent_hepacivirus"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "Pneumoviridae",
+		"kraken_nr_reads": 20,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Family",
+		"full_taxon_level:family_genus_species_subspecies": "Pneumoviridae"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "Peribunyaviridae",
+		"kraken_nr_reads": 2,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Family",
+		"full_taxon_level:family_genus_species_subspecies": "Peribunyaviridae"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "Orthobunyavirus",
+		"kraken_nr_reads": 2,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Peribunyaviridae->Orthobunyavirus"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "Simbu_orthobunyavirus",
+		"kraken_nr_reads": 2,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Peribunyaviridae->Orthobunyavirus->Simbu_orthobunyavirus"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "Anelloviridae",
+		"kraken_nr_reads": 119,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Family",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "Alphatorquevirus",
+		"kraken_nr_reads": 117,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "Torque_teno_virus_8",
+		"kraken_nr_reads": 37,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_8"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "Torque_teno_virus_5",
+		"kraken_nr_reads": 34,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_5"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "Torque_teno_virus_7",
+		"kraken_nr_reads": 10,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_7"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "Torque_teno_virus_19",
+		"kraken_nr_reads": 9,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_19"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "Torque_teno_virus_16",
+		"kraken_nr_reads": 4,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_16"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "Torque_teno_virus_24",
+		"kraken_nr_reads": 3,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_24"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "Torque_teno_virus_21",
+		"kraken_nr_reads": 2,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_21"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "Poxviridae",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Family",
+		"full_taxon_level:family_genus_species_subspecies": "Poxviridae"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "BeAn_58058_virus",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Poxviridae->Alphatorquevirus->BeAn_58058_virus"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "Siphoviridae",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Family",
+		"full_taxon_level:family_genus_species_subspecies": "Siphoviridae"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "L5virus",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Siphoviridae->L5virus"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "Mycobacterium_phage_EagleEye",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Siphoviridae->L5virus->Mycobacterium_phage_EagleEye"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "Escherichia_virus_Lambda",
+		"kraken_nr_reads": "-",
+		"fast_virome_explorer": 58,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Caudovirales->Siphoviridae->Lambdavirus->Escherichia_virus_Lambda"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "Enterobacteria_phage_phiX174_sensu_lato",
+		"kraken_nr_reads": "-",
+		"fast_virome_explorer": 15,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Microviridae->Phix174microvirus->Enterobacteria_phage_phiX174_sensu_lato"
+	},
+	{
+		"sample_id": "P12653_1005",
+		"name": "PRJNA15467",
+		"kraken_nr_reads": "-",
+		"fast_virome_explorer": "-",
+		"metaphlan": 99.9579,
+		"classification": "Sub_Species",
+		"full_taxon_level:family_genus_species_subspecies": "Flaviviridae->Pegivirus->GB_virus_C->PRJNA15467"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Anelloviridae",
+		"kraken_nr_reads": 1719216,
+		"fast_virome_explorer": "-",
+		"metaphlan": 100,
+		"classification": "Family",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Alphatorquevirus",
+		"kraken_nr_reads": 1714915,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_virus_5",
+		"kraken_nr_reads": 394808,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_5"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_virus_19",
+		"kraken_nr_reads": 305232,
+		"fast_virome_explorer": 83442.1,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_19"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_virus_8",
+		"kraken_nr_reads": 287514,
+		"fast_virome_explorer": 13348.8,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_8"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_virus_21",
+		"kraken_nr_reads": 197821,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_21"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_virus_7",
+		"kraken_nr_reads": 158012,
+		"fast_virome_explorer": 4140.89,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_7"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_virus_16",
+		"kraken_nr_reads": 71429,
+		"fast_virome_explorer": 49056.5,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_16"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_virus_15",
+		"kraken_nr_reads": 804,
+		"fast_virome_explorer": 89.3847,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_15"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_virus_3",
+		"kraken_nr_reads": 521,
+		"fast_virome_explorer": 114335,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_3"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_virus_10",
+		"kraken_nr_reads": 288,
+		"fast_virome_explorer": 90.2937,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_10"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_virus_9",
+		"kraken_nr_reads": 261,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_9"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_virus_6",
+		"kraken_nr_reads": 237,
+		"fast_virome_explorer": 53767.5,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_6"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_virus_4",
+		"kraken_nr_reads": 223,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_4"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_virus_29",
+		"kraken_nr_reads": 181,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_29"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_virus_12",
+		"kraken_nr_reads": 174,
+		"fast_virome_explorer": 90.1229,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_12"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_virus_13",
+		"kraken_nr_reads": 154,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_13"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_virus_1",
+		"kraken_nr_reads": 94,
+		"fast_virome_explorer": 48.3957,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_1"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_virus_27",
+		"kraken_nr_reads": 87,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_27"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_virus_11",
+		"kraken_nr_reads": 71,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_11"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_virus_28",
+		"kraken_nr_reads": 69,
+		"fast_virome_explorer": 16.5942,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_28"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Simian_torque_teno_virus_30",
+		"kraken_nr_reads": 10,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Simian_torque_teno_virus_30"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_virus_14",
+		"kraken_nr_reads": 36,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_14"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_virus_2",
+		"kraken_nr_reads": 36,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_2"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_virus_25",
+		"kraken_nr_reads": 33,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_25"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_virus_24",
+		"kraken_nr_reads": 21,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_24"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_virus_20",
+		"kraken_nr_reads": 11,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_20"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_virus_23",
+		"kraken_nr_reads": 2,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Alphatorquevirus->Torque_teno_virus_23"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Betatorquevirus",
+		"kraken_nr_reads": 4001,
+		"fast_virome_explorer": "-",
+		"metaphlan": 0.02449,
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_mini_virus_8",
+		"kraken_nr_reads": 2288,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_8"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_mini_virus_ALH8",
+		"kraken_nr_reads": 27,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_ALH8"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_mini_virus_18",
+		"kraken_nr_reads": 14,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_18"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_mini_virus_ALA22",
+		"kraken_nr_reads": 13,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_ALA22"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "TTV-like_mini_virus",
+		"kraken_nr_reads": 2,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->TTV-like_mini_virus"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_mini_virus_10",
+		"kraken_nr_reads": 50,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_10"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_mini_virus_5",
+		"kraken_nr_reads": 16,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_5"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_mini_virus_7",
+		"kraken_nr_reads": 16,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_7"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_mini_virus_12",
+		"kraken_nr_reads": 15,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_12"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_mini_virus_11",
+		"kraken_nr_reads": 12,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_11"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_mini_virus_2",
+		"kraken_nr_reads": 9,
+		"fast_virome_explorer": "-",
+		"metaphlan": 0.02449,
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_2"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_mini_virus_3",
+		"kraken_nr_reads": 7,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_3"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_mini_virus_1",
+		"kraken_nr_reads": 6,
+		"fast_virome_explorer": 311.107,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_1"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_mini_virus_9",
+		"kraken_nr_reads": 6,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_9"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_mini_virus_4",
+		"kraken_nr_reads": 2,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_4"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Gammatorquevirus",
+		"kraken_nr_reads": 134,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_midi_virus_2",
+		"kraken_nr_reads": 22,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_2"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_midi_virus_8",
+		"kraken_nr_reads": 13,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_8"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_midi_virus_7",
+		"kraken_nr_reads": 12,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_7"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_midi_virus_14",
+		"kraken_nr_reads": 9,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_14"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_midi_virus_11",
+		"kraken_nr_reads": 8,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_11"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_midi_virus_1",
+		"kraken_nr_reads": 6,
+		"fast_virome_explorer": 16.0512,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_1"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_midi_virus_10",
+		"kraken_nr_reads": 6,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_10"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_midi_virus_15",
+		"kraken_nr_reads": 6,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_15"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_midi_virus_12",
+		"kraken_nr_reads": 4,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_midi_virus_12"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Torque_teno_virus",
+		"kraken_nr_reads": 27,
+		"fast_virome_explorer": 16.1567,
+		"metaphlan": 99.97551,
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Torque_teno_virus"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Giant_panda_anellovirus",
+		"kraken_nr_reads": 12,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Giant_panda_anellovirus"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Small_anellovirus",
+		"kraken_nr_reads": 4,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Small_anellovirus"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Small_anellovirus_1",
+		"kraken_nr_reads": 4,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Sub_Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Gammatorquevirus->Small_anellovirus->Small_anellovirus_1"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Myoviridae",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Family",
+		"full_taxon_level:family_genus_species_subspecies": "Myoviridae"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Jd18virus",
+		"kraken_nr_reads": 1,
+		"fast_virome_explorer": "-",
+		"metaphlan": "-",
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Myoviridae->Jd18virus"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Enterobacteria_phage_phiX174_sensu_lato",
+		"kraken_nr_reads": "-",
+		"fast_virome_explorer": 99,
+		"metaphlan": "-",
+		"classification": "Species",
+		"full_taxon_level:family_genus_species_subspecies": "Microviridae->Phix174microvirus->Enterobacteria_phage_phiX174_sensu_lato"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "Anelloviridae_noname",
+		"kraken_nr_reads": "-",
+		"fast_virome_explorer": "-",
+		"metaphlan": 99.97551,
+		"classification": "Genus",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Anelloviridae_noname"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "PRJNA70005",
+		"kraken_nr_reads": "-",
+		"fast_virome_explorer": "-",
+		"metaphlan": 99.97551,
+		"classification": "Sub_Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Anelloviridae_noname->Torque_teno_virus->PRJNA70005"
+	},
+	{
+		"sample_id": "P12653_1006",
+		"name": "PRJNA48171",
+		"kraken_nr_reads": "-",
+		"fast_virome_explorer": "-",
+		"metaphlan": 0.02449,
+		"classification": "Sub_Species",
+		"full_taxon_level:family_genus_species_subspecies": "Anelloviridae->Betatorquevirus->Torque_teno_mini_virus_2->PRJNA48171"
+	}
+]
+</script>
+	</body>
+ </html>
